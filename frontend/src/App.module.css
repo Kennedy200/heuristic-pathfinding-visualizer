@@ -1,0 +1,190 @@
+.app {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(139, 92, 246, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+    linear-gradient(160deg, #1e1b4b 0%, #312e81 30%, #1e1b4b 60%, #0f172a 100%);
+  padding: 2.5rem 1.5rem;
+}
+
+/* ─── HOME PAGE ─── */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 20px rgba(99,102,241,0.4);
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: rgba(199, 210, 254, 0.85);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Preview section */
+.previewSection {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.previewTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: rgba(199,210,254,0.9);
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.previewMaze {
+  display: flex;
+  justify-content: center;
+}
+
+/* Welcome card */
+.welcomeCard {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin-top: 1.5rem;
+}
+
+.welcomeTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1.25rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: all 0.2s;
+}
+
+.step:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateX(6px);
+}
+
+.stepNum {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(99,102,241,0.35);
+}
+
+.stepText {
+  color: rgba(199,210,254,0.9);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.stepText strong {
+  color: white;
+}
+
+/* ─── RESULTS PAGE ─── */
+.resultsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.resultsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.resultsHeaderText {
+  flex: 1;
+  text-align: center;
+}
+
+.resultsTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 0.25rem;
+}
+
+.resultsWinnerLine {
+  color: rgba(253, 230, 138, 0.9);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.backBtn, .newBtn {
+  padding: 0.55rem 1.25rem;
+  border-radius: 10px;
+  border: 1.5px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.08);
+  color: white;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  backdrop-filter: blur(6px);
+}
+
+.backBtn:hover, .newBtn:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: rgba(255,255,255,0.4);
+  transform: translateY(-1px);
+}
+
+/* 2×2 results grid */
+.resultsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+}
+
+/* If only 1 or 3 results, still looks good */
+@media (max-width: 900px) {
+  .resultsGrid {
+    grid-template-columns: 1fr;
+  }
+}

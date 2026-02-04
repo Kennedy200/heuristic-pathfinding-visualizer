@@ -1,0 +1,8 @@
+HEURISTIC COMPARISON RESULTS
+======================================================================
+
+This shows how different 'smart guessing' methods compare
+when finding paths through mazes.
+
+Lower 'Nodes Checked' = More Efficient
+======================================================================
